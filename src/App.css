@@ -153,7 +153,11 @@
 }
 
 .BouncyKirb {
-  animation: bouncyKirb 0.5s linear 0s 2;
+  animation: bouncyKirb 2s linear 0s 2;
+}
+
+.InhaleBouncyKirb {
+  animation: bouncyKirb 0.5s linear 0s 8;
 }
 
 @keyframes bouncyKirb {
@@ -184,6 +188,14 @@
   transition: all 10ms ease-in-out;
 }
 
+.MouthInhale {
+  opacity: 1;
+  animation: bouncyKirb 0.5s linear 0s 8;
+}
+.HideInhale {
+  opacity: 0;
+}
+
 .EyesOpen {
   opacity: 100%;
   transition: all 10ms ease-in-out;
@@ -203,18 +215,36 @@
   animation: rightArmMove 0.5s linear 0s 2;
 }
 
+.InhaleRightArmMove {
+  animation: inhaleRightArmMove 4s linear 0s 1;
+}
+@keyframes inhaleRightArmMove {
+  0% {
+    transform: rotate(0deg) translate(0px, 0px);
+  }
+  5% {
+    transform: rotate(-3deg) translate(-20px, -60px);
+  }
+  95% {
+    transform: rotate(-3deg) translate(-20px, -60px);
+  }
+  100% {
+    transform: rotate(0deg) translate(0px, 0px);
+  }
+}
+
 @keyframes rightArmMove {
   0% {
     transform: rotate(0deg) translate(0px, 0px);
   }
   25% {
-    transform: rotate(-3deg) translate(-20px, -90px);
+    transform: rotate(-10deg) translate(-50px, -20px);
   }
   50% {
     transform: rotate(0deg) translate(0px, 0px);
   }
   75% {
-    transform: rotate(-3deg) translate(-20px, -90px);
+    transform: rotate(-10deg) translate(-50px, -20px);
   }
   100% {
     transform: rotate(0deg) translate(0px, 0px);
@@ -240,6 +270,24 @@
     transform: rotate(0deg) translate(0px, 0px);
   }
   75% {
+    transform: rotate(10deg) translate(60px, -130px);
+  }
+  100% {
+    transform: rotate(0deg) translate(0px, 0px);
+  }
+}
+
+.InhaleLeftArmMove {
+  animation: inhaleLeftArmMove 4s linear 0s 1;
+}
+@keyframes inhaleLeftArmMove {
+  0% {
+    transform: rotate(0deg) translate(0px, 0px);
+  }
+  5% {
+    transform: rotate(10deg) translate(60px, -130px);
+  }
+  95% {
     transform: rotate(10deg) translate(60px, -130px);
   }
   100% {

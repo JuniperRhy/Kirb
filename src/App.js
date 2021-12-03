@@ -6,10 +6,12 @@ import { Howl, Howler } from "howler";
 import Haaaiiiii from "./kirbSVGmedia/Haaaiiiiii.mp3";
 import KirbHuh from "./kirbSVGmedia/KirbHuh.mp3";
 import KirbSleep from "./kirbSVGmedia/KirbSleep.mp3";
+import KirbInhale from "./kirbSVGmedia/KirbInhale.mp3";
 
 function App() {
   const [isHover, setIsHover] = useState(false);
   const [isClicked, setIsClicked] = useState(false);
+  const [isMouthClicked, setIsMouthClicked] = useState(false);
 
   const sound = new Howl({
     src: Haaaiiiii,
@@ -20,6 +22,12 @@ function App() {
   const huh = new Howl({
     src: KirbHuh,
     volume: 0.15,
+    loop: false,
+  });
+
+  const inhale = new Howl({
+    src: KirbInhale,
+    volume: 0.25,
     loop: false,
   });
 
@@ -40,11 +48,15 @@ function App() {
         setIsHover={setIsHover}
         isClicked={isClicked}
         setIsClicked={setIsClicked}
+        isMouthClicked={isMouthClicked}
+        setIsMouthClicked={setIsMouthClicked}
+        inhale={inhale}
         huh={huh}
         sound={sound}
         play={play}
         stop={stop}
       />
+      {console.log(isMouthClicked)}
     </div>
   );
 }
