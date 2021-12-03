@@ -1,0 +1,262 @@
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  animation: fadeIn 5s linear 5s 1;
+  -webkit-animation: fadeIn 5s;
+  -moz-animation: fadeIn 5s;
+  -o-animation: fadeIn 5s;
+  -ms-animation: fadeIn 5s;
+  height: 100vh;
+}
+
+.Asleep {
+  position: absolute;
+  margin-top: 10rem;
+  font-family: Balonku;
+  color: burlywood;
+  max-height: 3rem;
+  max-width: 10rem;
+
+  margin-left: auto;
+  margin-right: auto;
+  transition: all 7s ease-in-out;
+}
+
+.Awake {
+  position: absolute;
+  margin-top: 10rem;
+  color: rgb(70, 70, 70);
+  font-family: Balonku;
+  max-height: 3rem;
+  max-width: 10rem;
+
+  margin-left: auto;
+  margin-right: auto;
+  text-shadow: 2px 2px 30px rgb(70, 70, 70);
+  font-size: 5rem;
+  /* transition: all 7s ease-in-out; */
+}
+
+.first {
+  animation: textFade 6s linear 0s infinite;
+}
+
+.second {
+  animation: textFade 6s linear 0.5s infinite;
+}
+
+.third {
+  animation: textFade 6s linear 1s infinite;
+}
+
+.fourth {
+  animation: textFade 6s linear 1.5s infinite;
+}
+
+.fifth {
+  animation: textFade 6s linear 2s infinite;
+}
+.sixth {
+  animation: textFade 6s linear 2.5s infinite;
+}
+
+@keyframes textFade {
+  0% {
+    color: rgb(70, 70, 70);
+    font-size: large;
+    border-radius: 50%;
+    background-size: 0.25rem;
+  }
+  50% {
+    color: burlywood;
+    font-size: 5rem;
+    text-shadow: 2px 2px 30px rgb(107, 241, 197);
+
+    border-radius: 50%;
+    background-size: 0.25rem;
+  }
+  100% {
+    color: rgb(70, 70, 70);
+    font-size: large;
+    border-radius: 50%;
+    background-size: 0.25rem;
+  }
+}
+
+.Kirb {
+  margin-top: 12rem;
+  transform: scale(0.75);
+  filter: drop-shadow(10px 35px 50px rgb(27, 27, 27));
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.BouncyKirb {
+  animation: bouncyKirb 0.5s linear 0s 2;
+}
+
+@keyframes bouncyKirb {
+  0% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(10px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  75% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.MouthOpen {
+  opacity: 100%;
+  transition: all 10ms ease-in-out;
+}
+
+.MouthClosed {
+  opacity: 0%;
+  transition: all 10ms ease-in-out;
+}
+
+.EyesOpen {
+  opacity: 100%;
+  transition: all 10ms ease-in-out;
+}
+
+.EyesClosed {
+  opacity: 0%;
+  transition: all 10ms ease-in-out;
+}
+
+.RightArmStill {
+  animation: name duration timing-function delay iteration-count direction
+    fill-mode;
+}
+
+.RightArmMove {
+  animation: rightArmMove 0.5s linear 0s 2;
+}
+
+@keyframes rightArmMove {
+  0% {
+    transform: rotate(0deg) translate(0px, 0px);
+  }
+  25% {
+    transform: rotate(-3deg) translate(-20px, -90px);
+  }
+  50% {
+    transform: rotate(0deg) translate(0px, 0px);
+  }
+  75% {
+    transform: rotate(-3deg) translate(-20px, -90px);
+  }
+  100% {
+    transform: rotate(0deg) translate(0px, 0px);
+  }
+}
+.LeftArmStill {
+  animation: name duration timing-function delay iteration-count direction
+    fill-mode;
+}
+
+.LeftArmMove {
+  animation: leftArmMove 0.5s linear 0s 2;
+}
+
+@keyframes leftArmMove {
+  0% {
+    transform: rotate(0deg) translate(0px, 0px);
+  }
+  25% {
+    transform: rotate(10deg) translate(60px, -130px);
+  }
+  50% {
+    transform: rotate(0deg) translate(0px, 0px);
+  }
+  75% {
+    transform: rotate(10deg) translate(60px, -130px);
+  }
+  100% {
+    transform: rotate(0deg) translate(0px, 0px);
+  }
+}
+
+@font-face {
+  font-family: Balonku;
+  src: url("./kirbSVGmedia/BalonkuRegular.otf");
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
