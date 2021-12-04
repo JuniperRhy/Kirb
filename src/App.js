@@ -1,8 +1,8 @@
 import "./App.css";
 import Kirb from "./kirb";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import useSound from "use-sound";
-import { Howl, Howler } from "howler";
+import { Howl } from "howler";
 import Haaaiiiii from "./kirbSVGmedia/Haaaiiiiii.mp3";
 import KirbHuh from "./kirbSVGmedia/KirbHuh.mp3";
 import KirbSleep from "./kirbSVGmedia/KirbSleep.mp3";
