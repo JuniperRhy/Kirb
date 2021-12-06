@@ -33,6 +33,10 @@ function App() {
 
   const [play, { stop }] = useSound(KirbSleep, { volume: 0.05, loop: true });
 
+  window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+  };
+
   return (
     <div className="App">
       <h1 className={isHover ? "Awake" : "Asleep"}>

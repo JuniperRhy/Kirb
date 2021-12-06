@@ -154,6 +154,7 @@
 
 .BouncyKirb {
   animation: bouncyKirb 2s linear 0s 2;
+  cursor: pointer;
 }
 
 .InhaleBouncyKirb {
@@ -191,9 +192,11 @@
 .MouthInhale {
   opacity: 1;
   animation: bouncyKirb 0.5s linear 0s 8;
+  cursor: pointer;
 }
 .HideInhale {
   opacity: 0;
+  cursor: pointer;
 }
 
 .EyesOpen {
